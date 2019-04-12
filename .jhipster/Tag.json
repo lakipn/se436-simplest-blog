@@ -1,0 +1,33 @@
+{
+    "name": "Tag",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength",
+                "required"
+            ],
+            "fieldValidateRulesMaxlength": 64
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "blogPost",
+            "otherEntityRelationshipName": "tags",
+            "relationshipName": "blogPosts",
+            "otherEntityField": "caption",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190412124836",
+    "entityTableName": "tag",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
